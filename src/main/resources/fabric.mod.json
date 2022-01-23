@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "alchemicalenergy",
+  "version": "${version}",
+  "name": "Alchemical Energy",
+  "description": "Alchemical Energy",
+  "authors": [
+    "ProtoByter"
+  ],
+  "contact": {
+    "homepage": "https://github.com/ProtoByter",
+    "sources": "https://github.com/ProtoByter"
+  },
+
+  "license": "MIT",
+  "icon": "assets/alchemicalenergy/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.protobyter.alchemicalenergy.AlchemicalEnergy"
+    ],
+    "client": [
+      {
+        "value": "net.protobyter.alchemicalenergy.AlchemicalEnergyClient"
+      }
+    ]
+  },
+  "mixins": [
+    "alchemicalenergy.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.7.1",
+    "fabric": "*",
+    "fabric-language-kotlin": "*",
+    "minecraft": "1.18.1"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
