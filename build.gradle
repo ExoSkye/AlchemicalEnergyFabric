@@ -78,12 +78,24 @@ publishing {
                 builtBy remapSourcesJar
             }
         }
+        gpr(MavenPublication) {
+            from(components.java)
+        }
     }
 
     // select the repositories you want to publish to
     repositories {
         // uncomment to publish to the local maven
         // mavenLocal()
+        repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/ProotByter/AlchemicalEnergyFabric")
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
     }
 }
 
