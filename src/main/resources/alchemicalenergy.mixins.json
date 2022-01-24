@@ -1,11 +1,10 @@
 {
-  "required": true,
+  "required": false,
   "package": "net.protobyter.alchemicalenergy.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1
