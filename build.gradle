@@ -87,7 +87,6 @@ publishing {
     repositories {
         // uncomment to publish to the local maven
         // mavenLocal()
-        repositories {
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/ProotByter/AlchemicalEnergyFabric")
